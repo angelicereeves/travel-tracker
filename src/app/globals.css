@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* --- Bright Travel Journal Theme --- */
+
+body {
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(56, 189, 248, 0.35), transparent 60%),
+    radial-gradient(800px 500px at 90% 20%, rgba(251, 113, 133, 0.35), transparent 60%),
+    radial-gradient(700px 400px at 50% 100%, rgba(253, 224, 71, 0.25), transparent 55%),
+    linear-gradient(to bottom, #fefefe, #fff7ed);
+  color: #0f172a;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.4);
+}
