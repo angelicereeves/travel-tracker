@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { countries, countryTrips } from "@/lib/data";
+import PhotoGallery from "@/components/PhotoGallery";
+import VideoGallery from "@/components/VideoGallery";
+import FoodHighlights from "@/components/FoodHighlights";
+
 
 function themeClasses(theme?: string) {
   switch (theme) {
@@ -55,10 +59,19 @@ export default async function TripPage({
 
         <div className="relative flex flex-wrap items-start justify-between gap-6">
           <div>
-            <p className="inline-flex items-center gap-2 text-xs font-extrabold bg-white/20 px-4 py-2 rounded-full">
-              🧳 {country?.name ?? trip.countryCode}
-              {trip.cities?.length ? ` • ${trip.cities.join(", ")}` : ""}
-            </p>
+            <div className="flex flex-wrap items-center gap-2">
+  <p className="inline-flex items-center gap-2 text-xs font-extrabold bg-white/20 px-4 py-2 rounded-full">
+    🧳 {country?.name ?? trip.countryCode}
+    {trip.cities?.length ? ` • ${trip.cities.join(", ")}` : ""}
+  </p>
+
+  {trip.kind === "home" ? (
+    <span className="inline-flex items-center gap-2 text-xs font-extrabold bg-white/20 px-4 py-2 rounded-full">
+      🏡 Home Base
+    </span>
+  ) : null}
+</div>
+
 
             <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight">
               {trip.title}
@@ -106,6 +119,10 @@ export default async function TripPage({
         </ul>
       </div>
 
+      <FoodHighlights items={trip.foodHighlights} />
+      <PhotoGallery photos={trip.photos} />
+      <VideoGallery videos={trip.videos} />
+
       {/* Notes */}
       {trip.notes && (
         <div className="rounded-[2rem] bg-white shadow-md p-7">
@@ -119,9 +136,13 @@ export default async function TripPage({
             <div className="text-2xl">📝</div>
           </div>
 
+          
           <p className="mt-4 text-slate-700 leading-relaxed">{trip.notes}</p>
+          
         </div>
       )}
     </div>
+
+    
   );
 }

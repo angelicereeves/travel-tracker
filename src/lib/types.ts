@@ -24,6 +24,8 @@ export type Country = {
   theme?: "sunset" | "ocean" | "lime" | "grape";
 };
 
+export type TripKind = "trip" | "home" | "short";
+
 
 export type CountryTrip = {
   id: string;
@@ -36,6 +38,11 @@ export type CountryTrip = {
   highlights: string[]; // bullet list of what you did
   notes?: string;      // optional extra paragraph
   coverImage?: string; // later
+  kind?: TripKind;
+  photos?: TripPhoto[];
+  videos?: TripVideo[];
+  foodHighlights?: FoodHighlight[];
+
 };
 
 export type JourneyEventType = "move" | "trip" | "home";
@@ -49,4 +56,31 @@ export type JourneyEvent = {
   dateLabel?: string;     // optional: "2019", "Summer 2022", etc.
   description: string;
   highlights?: string[];
+
+  tripSlug?: string;
+};
+
+export type TripPhoto = {
+  src: string;       // e.g. "/photos/trips/es-barcelona/001.jpg"
+  alt: string;       // caption / accessibility text
+  width?: number;    // optional
+  height?: number;   // optional
+};
+
+export type TripVideo = {
+  src: string;       // e.g. "/videos/trips/es-barcelona/clip1.mp4" (later)
+  title?: string;
+};
+
+export type FoodHighlight = {
+  name: string;
+  place?: string;
+  note?: string;
+  emoji?: string;
+
+  // ✅ NEW
+  image?: {
+    src: string;   // "/photos/food/it-milan/dallo-zio.jpg"
+    alt: string;
+  };
 };

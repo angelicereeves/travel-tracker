@@ -41,6 +41,13 @@ export default function HomePage() {
             >
               Visited Countries
             </Link>
+
+            <Link
+              href="/map"
+              className="px-6 py-3 rounded-full bg-white/25 border border-white/40 font-bold hover:bg-white/30 transition"
+            >
+              Map
+            </Link>
           </div>
         </div>
       </div>

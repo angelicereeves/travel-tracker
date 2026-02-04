@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { JourneyEvent } from "@/lib/types";
 
 function badge(type: JourneyEvent["type"]) {
@@ -47,6 +48,8 @@ export default function TimelineItem({
     "ring-violet-200",
   ][index % 5];
 
+  const tripHref = event.tripSlug ? `/trips/${event.tripSlug}` : null;
+
   return (
     <div className="relative pl-10">
       <div
@@ -60,9 +63,19 @@ export default function TimelineItem({
       <div className="rounded-3xl bg-white shadow-md border border-sky-100 p-6">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h3 className="text-lg font-extrabold text-sky-900">
-              {event.title}
-            </h3>
+            {tripHref ? (
+              <Link
+                href={tripHref}
+                className="text-lg font-extrabold text-sky-900 hover:underline"
+              >
+                {event.title}
+              </Link>
+            ) : (
+              <h3 className="text-lg font-extrabold text-sky-900">
+                {event.title}
+              </h3>
+            )}
+
             <p className="mt-1 text-sm font-semibold text-sky-700">
               {event.location}
             </p>
@@ -74,7 +87,11 @@ export default function TimelineItem({
                 {event.dateLabel}
               </span>
             )}
-            <span className={`text-xs font-extrabold px-3 py-1 rounded-full ${badge(event.type)}`}>
+            <span
+              className={`text-xs font-extrabold px-3 py-1 rounded-full ${badge(
+                event.type
+              )}`}
+            >
               {label(event.type)}
             </span>
           </div>
@@ -94,6 +111,17 @@ export default function TimelineItem({
                 {h}
               </span>
             ))}
+          </div>
+        ) : null}
+
+        {tripHref ? (
+          <div className="mt-4">
+            <Link
+              href={tripHref}
+              className="inline-flex items-center gap-2 text-sm font-bold text-sky-700 hover:text-sky-900 underline"
+            >
+              Open trip →
+            </Link>
           </div>
         ) : null}
       </div>
