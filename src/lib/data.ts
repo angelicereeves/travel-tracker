@@ -136,6 +136,36 @@ export const countryTrips: CountryTrip[] = [
     highlights: ["Scenic views", "Ocean walks"],
   },
   {
+  id: "us-san-diego",
+  countryCode: "US",
+  slug: "us-san-diego",
+  title: "San Diego",
+  description: "A sunny birthday getaway filled with marine life and magical lights.",
+  cities: ["San Diego"],
+  highlights: [
+    "Birthday trip",
+    "SeaWorld",
+    "Botanical garden light show",
+    "Coastal vibes"
+  ],
+},
+{
+  id: "us-salt-lake-city",
+  countryCode: "US",
+  slug: "us-salt-lake-city",
+  title: "Salt Lake City",
+  description: "A birthday trip that turned into an unforgettable proposal surrounded by wildlife and wide-open views.",
+  cities: ["Salt Lake City"],
+  highlights: [
+    "Birthday trip",
+    "Topgolf",
+    "Great Salt Lake",
+    "Aquarium penguin feeding",
+    "Proposal"
+  ],
+},
+
+  {
     id: "us-grand-canyon",
     countryCode: "US",
     slug: "us-grand-canyon",
@@ -144,6 +174,7 @@ export const countryTrips: CountryTrip[] = [
     cities: ["Grand Canyon"],
     highlights: ["Vast views", "Nature"],
   },
+ 
 
   /* ---------- ALBANIA ---------- */
   {
