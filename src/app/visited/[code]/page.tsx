@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getCountryByCode, getTripsForCountry } from "@/lib/countries";
+import { countries, countryTrips } from "@/lib/data";
+
 
 function themeClasses(theme?: string) {
   switch (theme) {
@@ -23,7 +24,7 @@ export default async function CountryPage({
 }) {
   const { code } = await params;
 
-  const country = getCountryByCode(code);
+const country = countries.find((c) => c.code === code.toUpperCase());
 
   if (!country) {
     return (
@@ -39,7 +40,7 @@ export default async function CountryPage({
     );
   }
 
-  const trips = getTripsForCountry(country.code);
+const trips = countryTrips.filter((t) => t.countryCode === country?.code);
 
   return (
     <div className="space-y-8">

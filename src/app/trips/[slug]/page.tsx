@@ -103,7 +103,7 @@ export default async function TripPage({
           <div>
             <h2 className="text-xl font-extrabold text-sky-900">What we did</h2>
             <p className="mt-2 text-sm text-slate-700">
-              Highlights from the trip. (We’ll add photos and videos later.)
+              Highlights from the trip. 
             </p>
           </div>
           <div className="text-2xl">✨</div>
