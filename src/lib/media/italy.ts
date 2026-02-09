@@ -58,7 +58,7 @@ export const romePhotos: TripPhoto[] = Array.from(
   (_, i) => {
     const n = i + 1;
     return {
-      src: `/trips/italy/rome/rome${n}.jpg`,
+      src: `/trips/italy/rome/rome${n}.JPG`,
       alt: `Rome photo ${n}`,
     };
   }

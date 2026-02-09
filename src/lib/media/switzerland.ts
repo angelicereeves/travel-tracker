@@ -6,7 +6,7 @@ export const switzerlandPhotos: TripPhoto[] = Array.from(
   (_, i) => {
     const n = i + 1;
     return {
-      src: `/trips/switzerland/switzerland${n}.jpg`,
+      src: `/trips/switzerland/switzerland${n}.JPG`,
       alt: `Switzerland photo ${n}`,
     };
   }

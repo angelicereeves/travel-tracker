@@ -6,7 +6,7 @@ export const maltaPhotos: TripPhoto[] = Array.from(
   (_, i) => {
     const n = i + 1;
     return {
-      src: `/trips/malta/malta${n}.jpg`,
+      src: `/trips/malta/malta${n}.JPG`,
       alt: `Malta photo ${n}`,
     };
   }

@@ -3,7 +3,7 @@ import type { TripPhoto, TripVideo } from "../types";
 export const barcelonaPhotos: TripPhoto[] = Array.from({ length: 29 }, (_, i) => {
   const n = i + 1;
   return {
-    src: `/trips/spain/barcelona${n}.jpg`,
+    src: `/trips/spain/barcelona${n}.JPG`,
     alt: `Barcelona photo ${n}`,
     // optional (leave out if you don’t know exact sizes)
     // width: 1200,
