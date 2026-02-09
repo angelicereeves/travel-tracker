@@ -12,6 +12,6 @@ export const barcelonaPhotos: TripPhoto[] = Array.from({ length: 29 }, (_, i) =>
 });
 
 export const barcelonaVideos: TripVideo[] = [
-  { src: "/trips/spain/barcelonavideo1.mp4", title: "Barcelona video 1" },
-  { src: "/trips/spain/barcelonavideo2.mp4", title: "Barcelona video 2" },
+  { src: "/trips/spain/barcelonavideo1.MP4", title: "Barcelona video 1" },
+  { src: "/trips/spain/barcelonavideo2.MP4", title: "Barcelona video 2" },
 ];

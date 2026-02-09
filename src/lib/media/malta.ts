@@ -13,6 +13,6 @@ export const maltaPhotos: TripPhoto[] = Array.from(
 );
 
 export const maltaVideos: TripVideo[] = [
-  { src: "/trips/malta/maltavideo1.mp4", title: "Malta video 1" },
-  { src: "/trips/malta/maltavideo2.mp4", title: "Malta video 2" },
+  { src: "/trips/malta/maltavideo1.MP4", title: "Malta video 1" },
+  { src: "/trips/malta/maltavideo2.MP4", title: "Malta video 2" },
 ];

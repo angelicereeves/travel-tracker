@@ -13,11 +13,11 @@ export const parisPhotos: TripPhoto[] = Array.from(
 );
 
 export const parisVideos: TripVideo[] = [
-  { src: "/trips/france/parisvideo1.mp4", title: "Paris video 1" },
-  { src: "/trips/france/parisvideo2.mp4", title: "Paris video 2" },
-  { src: "/trips/france/parisvideo3.mp4", title: "Paris video 3" },
-  { src: "/trips/france/parisvideo4.mp4", title: "Paris video 4" },
-  { src: "/trips/france/parisvideo5.mp4", title: "Paris video 5" },
-  { src: "/trips/france/parisvideo6.mp4", title: "Paris video 6" },
+  { src: "/trips/france/parisvideo1.MP4", title: "Paris video 1" },
+  { src: "/trips/france/parisvideo2.MP4", title: "Paris video 2" },
+  { src: "/trips/france/parisvideo3.MP4", title: "Paris video 3" },
+  { src: "/trips/france/parisvideo4.MP4", title: "Paris video 4" },
+  { src: "/trips/france/parisvideo5.MP4", title: "Paris video 5" },
+  { src: "/trips/france/parisvideo6.MP4", title: "Paris video 6" },
   
 ];

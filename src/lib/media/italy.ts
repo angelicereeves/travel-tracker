@@ -65,6 +65,6 @@ export const romePhotos: TripPhoto[] = Array.from(
 );
 
 export const romeVideos: TripVideo[] = [
-  { src: "/trips/italy/rome/romevideo1.mp4", title: "Rome video 1" },
-  { src: "/trips/italy/rome/romevideo2.mp4", title: "Rome video 2" },
+  { src: "/trips/italy/rome/romevideo1.MP4", title: "Rome video 1" },
+  { src: "/trips/italy/rome/romevideo2.MP4", title: "Rome video 2" },
 ];
